@@ -1,0 +1,26 @@
+@import "tailwindcss";
+@custom-variant light-theme (&:where(.light-theme, .light-theme *));
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #050505;
+}
+
+.light-theme body { background: #f4f4f5; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(255,255,255,.35);
+  border-top-color: #e50914;
+  border-radius: 999px;
+  animation: spin .75s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
